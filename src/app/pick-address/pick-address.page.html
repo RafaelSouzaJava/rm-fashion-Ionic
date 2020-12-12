@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Escolha de Endereço</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list  class="color1">
+    <ion-list-header >
+      Selecione um endereço
+    </ion-list-header>
+    <ion-button size="large" ion-item *ngFor="let item of items"  (click)="nextPage(item)">
+      <div>
+        <h2>{{item.logradouro}}, {{item.numero}}</h2>
+      </div>
+        <div>
+        <p class="p1">{{item.complemento}} {{item.bairro}} CEP {{item.cep}}</p>
+      </div>
+        <div>
+        <p class="p2">{{item.cidade.nome}}, {{item.cidade.estado.nome}}</p>
+      </div>
+    </ion-button>
+  </ion-list>
+
+  <ion-col size="4">      
+    <ion-button shape="round"  color="secondary" class="btn2" [routerLink]="['/categorias']">              
+      <ion-icon slot="icon-only" name="arrow-back" ></ion-icon>
+      <p aion-text-center>
+        <ion-text color="light" >
+          Voltar
+        </ion-text>
+      </p>                                             
+    </ion-button>
+  </ion-col>
+
+</ion-content>

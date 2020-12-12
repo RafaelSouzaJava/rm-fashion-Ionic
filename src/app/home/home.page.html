@@ -1,48 +1,493 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content aion-padding class="animated fadeIn login auth-page">
+  <div class="theme-bg"></div>
+  <div class="auth-content">
 
-<ion-content>
-  <ion-card class="welcome-card">
-    <img src="/assets/shapes.svg" alt=""/>
-    <ion-card-header>
-      <ion-card-subtitle>Get Started</ion-card-subtitle>
-      <ion-card-title>Welcome to Ionic</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>
-        Now that your app has been created, you'll want to start building out features
-        and components. Check out some of the resources below for next steps.
-      </p>
-    </ion-card-content>
-  </ion-card>
+    <!-- espaço inicial para esta colocando um logo -->
+   
 
-  <ion-list lines="none">
-    <ion-list-header>
-      <ion-label>Resources</ion-label>
-    </ion-list-header>
-    <ion-item href="https://ionicframework.com/docs/">
-      <ion-icon slot="start" color="medium" name="book"></ion-icon>
-      <ion-label>Ionic Documentation</ion-label>
-    </ion-item>
-    <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-      <ion-icon slot="start" color="medium" name="build"></ion-icon>
-      <ion-label>Scaffold Out Your App</ion-label>
-    </ion-item>
-    <ion-item href="https://ionicframework.com/docs/layout/structure">
-      <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-      <ion-label>Change Your App Layout</ion-label>
-    </ion-item>
-    <ion-item href="https://ionicframework.com/docs/theming/basics">
-      <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-      <ion-label>Theme Your App</ion-label>
-    </ion-item>
-  </ion-list>
+
+    <!--espaço final para esta colocando um logo-->
+  <ion-grid>      
+  <ion-slides [options]="slideOptsOne"  pager="true">
+  <ion-slide *ngFor="let slide of slides" >
+    <div>   
+      <ion-img [src]="slide.img" style="height: 330px; width: 350px;"></ion-img>  
+    </div>    
+  </ion-slide>
+  </ion-slides>   
+
+
+    <ion-card>
+      <ion-card-header>
+        <p ion-text class="text09">
+          <ion-text color="warning">
+            Produtos Masculinos na promoção
+          </ion-text>
+        </p>        
+      </ion-card-header>
+      <div>
+      <ion-slides [options]="slidePer">
+        <ion-slide  style="width: 10%; height: 0%;">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodMasc1.jpg" style="height: 120px; width: 130px; display: block;" />
+          </ion-button>  
+          <ion-text color="light" class="fw700" >     
+          <p style="text-decoration: line-through; font-size: 13px; margin:5% 50% 0% 0%;  position: relative;">
+            R$ 69,90
+          </p>
+          <p style=" font-size: 13px; margin:-9.8% 0% 0% 40%;  position: relative; ">
+            R$ 59,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;">
+            5x de R$ 11,98
+          </p>
+        </ion-text> 
+        </div>
+        </ion-slide>
+
+
+        <ion-slide >
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure; ">
+            <img src="assets/imgs/prodMasc2.jpg" style="height: 120px; width: 120px; display: block;" />
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin:5% 50% 0% 0%;  position: relative;">
+            R$ 59,90
+          </p>
+          <p style=" font-size: 13px; margin:-9.5% 0% 0% 40%;  position: relative; ">
+            R$ 49,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative; ">
+            5x de R$ 9,98
+          </p>
+          </ion-text>
+        </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodMasc3.jpg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 50% 0% 0%; position: relative;">
+            R$ 119,90
+          </p>
+          <p style=" font-size: 13px; margin:-9.5% 0% 0% 40%; position: relative; ">
+            R$ 99,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;">
+            5x de R$ 19,98
+          </p>
+          </ion-text>
+        </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodMasc4.jpg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 45% 0% 0%; position: relative;">
+            R$ 49,90
+          </p>
+          <p style=" font-size: 13px; margin:-9.5% 0% 0% 45%; position: relative; ">
+            R$ 29,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;">
+            5x de R$ 5,98
+          </p>
+          </ion-text>
+        </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid" >
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodMasc5.jpg" style="height: 120px; width: 115px; display: block;" />
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 45% 0% 0%; position: relative;">
+            R$ 49,90
+          </p>
+          <p style=" font-size: 13px; margin:-9.5% 0% 0% 45%; position: relative; ">
+            R$ 39,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;">
+            5x de R$ 7,98
+          </p>
+          </ion-text>
+        </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodMasc6.jpg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 40% 0% 0%; position: relative;">
+            R$ 99,90
+          </p>
+          <p style=" font-size: 13px; margin:-9.5% 0% 0% 45%; position: relative; ">
+            R$ 89,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;">
+            5x de R$ 17,98
+          </p>
+          </ion-text>
+        </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>        
+        <p ion-text class="text09">
+          <ion-text color="warning">
+            Produtos Feminino na promoção
+          </ion-text>
+        </p>        
+      </ion-card-header>
+      <ion-slides [options]="slidePer">
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()"  style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodFem7.jpg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 40% 0% 0%; position: relative;">
+            R$ 99,90
+          </p>
+          <p  style=" font-size: 13px; margin:-9.8% 0% 0% 45%; position: relative; ">
+            R$ 89,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;">
+            5x de R$ 17,98
+          </p>
+        </ion-text>
+      </div>
+        </ion-slide>
+      
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodFem8.jpg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 40% 0% 0%; position: relative;"
+          >R$ 99,90
+        </p>
+          <p style=" font-size: 13px; margin:-9.8% 0% 0% 45%; position: relative; "
+          >R$ 89,90
+        </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 17,98
+        </p>
+      </ion-text>
+    </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()"  style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodfem9.jpg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 40% 0% 0%; position: relative;"
+          >R$ 99,90
+        </p>
+          <p style=" font-size: 13px; margin:-9.8% 0% 0% 45%; position: relative; "
+          >R$ 89,90
+        </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 17,98
+        </p>
+      </ion-text>
+    </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()"  style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodFem10.jpg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 40% 0% 0%; position: relative;"
+          >R$ 99,90
+          </p>
+          <p style=" font-size: 13px; margin:-9.8% 0% 0% 45%; position: relative; "
+          >R$ 89,90
+        </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 17,98
+        </p>
+        </ion-text>
+      </div>
+        </ion-slide>
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()"  style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodFem5.jpeg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 40% 0% 0%; position: relative;"
+          >R$ 69,90
+        </p>
+          <p style=" font-size: 13px; margin:-9.8% 0% 0% 45%; position: relative; "
+          >R$ 59,90
+        </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 11,98
+        </p>
+        </ion-text>
+      </div>
+        </ion-slide>
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()"  style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodFem3.jpeg" style="height: 120px; width: 115px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 40% 0% 0%; position: relative;"
+          >R$ 89,90
+        </p>
+          <p style=" font-size: 13px; margin:-9.8% 0% 0% 45%; position: relative; "
+          >R$ 79,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 15,98
+        </p>
+        </ion-text>
+      </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>        
+        <p ion-text class="text09">
+          <ion-text color="warning">
+            Produtos Variados nas promoção
+          </ion-text>
+        </p>        
+      </ion-card-header>
+      <ion-slides [options]="slidePer">
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full  (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prod.jpg" style="height: 115px; width: 105px; display: block; padding: 10px;" />
+          </ion-button>
+        </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full  (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prod.jpg" style="height: 115px; width: 105px; display: block; padding: 10px;"/>
+          </ion-button>
+          </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prod.jpg" style="height: 115px; width: 105px; display: block; padding: 10px;"/>
+          </ion-button>
+          </div>
+        </ion-slide>
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prod.jpg" style="height: 115px; width: 105px; display: block; padding: 10px;"/>
+          </ion-button>
+          </div>
+        </ion-slide>
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()"  style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prod.jpg" style="height: 115px; width: 105px; display: block; padding: 10px;"/>
+          </ion-button>
+          </div>
+        </ion-slide>
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full  (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prod.jpg" style="height: 115px; width: 105px; display: block; padding: 10px;"/>
+          </ion-button>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+
+
+    <ion-card>
+      <ion-card-header>        
+        <p ion-text class="text09">
+          <ion-text color="warning">
+            Produtos Sex Shop na promoção
+          </ion-text>
+        </p>        
+      </ion-card-header>
+      <ion-slides [options]="slidePer">
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodSex1.jpg" style="height: 115px; width: 100px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 50% 0% 0%; position: relative;">
+            R$99,90
+          </p>
+          <p  style=" font-size: 13px; margin:-11.5% 0% 0% 50%; position: relative; ">
+            R$89,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;">
+            5x de R$ 17,98
+          </p>
+        </ion-text>
+      </div>
+        </ion-slide>
+      
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodSex2.jpg" style="height: 115px; width: 100px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 50% 0% 0%; position: relative;"
+          >R$ 99,90
+        </p>
+          <p style=" font-size: 13px; margin:-11.5% 0% 0% 50%; position: relative; "
+          >R$ 89,90
+        </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 17,98
+        </p>
+      </ion-text>
+    </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodSex3.jpg" style="height: 115px; width: 100px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 50% 0% 0%; position: relative;"
+          >R$ 99,90
+        </p>
+          <p style=" font-size: 13px; margin:-11.5% 0% 0% 50%; position: relative; "
+          >R$ 89,90
+        </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 17,98
+        </p>
+      </ion-text>
+    </div>
+        </ion-slide>
+
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodSex4.jpg" style="height: 115px; width: 100px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin:5% 50% 0% 0%; position: relative;"
+          >R$ 99,90
+          </p>
+          <p style=" font-size: 13px; margin:-11.5% 0% 0% 50%; position: relative; "
+          >R$ 89,90
+        </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 17,98
+        </p>
+        </ion-text>
+      </div>
+        </ion-slide>
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()"  style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodSex5.jpg" style="height: 115px; width: 100px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin:5% 50% 0% 0%; position: relative;"
+          >R$ 69,90
+        </p>
+          <p style=" font-size: 13px; margin:-11.5% 0% 0% 50%; position: relative; "
+          >R$ 59,90
+        </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 11,98
+        </p>
+        </ion-text>
+      </div>
+        </ion-slide>
+
+
+        <ion-slide class="slid">
+          <div>
+          <ion-button ion-button black full (click)="login()" style="height: 100%; width: 100%; --background:azure;">
+            <img src="assets/imgs/prodSex6.jpg" style="height: 115px; width: 100px; display: block;"/>
+          </ion-button>
+          <ion-text color="light" class="fw700" >
+          <p style="text-decoration: line-through; font-size: 13px; margin: 5% 50% 0% 0%; position: relative;"
+          >R$ 89,90
+        </p>
+          <p style=" font-size: 13px; margin:-11.5% 0% 0% 50%; position: relative; "
+          >R$ 79,90
+          </p>
+          <p style=" opacity: 0.6; font-size: 13px; margin:3% 5% 0% 0%; position: relative;"
+          >5x de R$ 15,98
+        </p>
+        </ion-text>
+      </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  </ion-grid>
+
+ </div>
 </ion-content>

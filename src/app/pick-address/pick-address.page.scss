@@ -1,0 +1,59 @@
+:host {
+    ion-content {
+        --background: linear-gradient(135deg, var(--ion-color-tertiary-shade), var(--ion-color-primary-tint));
+    }
+}
+
+.color1 {
+    background: linear-gradient(135deg, var(--ion-color-tertiary-shade), var(--ion-color-primary-tint));
+}
+
+ion-list-header {
+    font-size: 20px;
+    margin-left: 50px;
+    color: #f4f5f8;
+}
+
+ion-button {    
+     height: 110px;
+     width: 356px;
+     
+}
+
+.btn2{
+    font-size: 13px;
+    margin-left: 70%;
+    margin-right: 5%;
+    width: 25%; height: 7%;
+}
+
+h2 {
+    
+    position: static;
+    
+    text-overflow: clip; 
+    font-size: 16px;
+    margin-top: -50px; 
+    margin-right: 140px;
+    margin-left: 10px;
+    
+}
+
+.p1 {
+    font-size: 16px; 
+    position: static;
+    
+    margin-top: 3px; 
+    text-overflow: clip;     
+    margin-right: 45px;
+    margin-left: -352px; 
+}
+
+.p2 {
+    font-size: 16px; 
+    position: static;    
+    text-overflow: clip;     
+    margin-right: 30px;
+    margin-left: -450px;
+    margin-top: 80px; 
+}

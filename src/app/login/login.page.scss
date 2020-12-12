@@ -1,0 +1,15 @@
+:host {
+    ion-content {
+        --background: linear-gradient(135deg, var(--ion-color-tertiary-shade), var(--ion-color-primary-tint));
+    }
+}
+
+.paz {
+    position: relative;
+    z-index: 10;
+}
+
+.fw700 {
+    align-items: center;
+    text-align: center;
+}

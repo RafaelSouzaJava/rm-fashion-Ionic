@@ -1,0 +1,53 @@
+<ion-header >
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Categorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content aion-no-padding> 
+  <ion-fab horizontal="end" vertical="top" edge  slot="fixed">
+    <ion-fab-button [routerLink]="['/cart']">
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> 
+  <ion-list >    
+      <ion-button ion-item-group class="catbtn" [routerLink]="['/categoria-masculino']">
+      <ion-thumbnail item-start class="catthumb">
+        <img src="assets/imgs/categoriaM2.jpg" class="catimg"/>
+      </ion-thumbnail>
+      <p>Masculino</p>           
+    </ion-button>   
+  </ion-list>
+    
+    <ion-list >
+      <ion-button ion-item class="catbtn" [routerLink]="['/categoria-feminino']">
+        <ion-thumbnail item-start class="catthumb"> 
+          <img src="assets/imgs/categoriaF.jpg" class="catimg2"/>
+        </ion-thumbnail>
+        <p >Feminino</p> 
+      </ion-button>
+      </ion-list>
+    
+      <ion-list >
+        <ion-button ion-item class="catbtn" [routerLink]="['/variados']">
+          <ion-thumbnail item-start class="catthumb">
+            <img src="assets/imgs/categoriaV2.jpg" class="catimg3"/>
+          </ion-thumbnail>
+          <p >Variados</p> 
+        </ion-button>
+        </ion-list>
+    
+        <ion-list >
+          <ion-button ion-item-group class="catbtn" [routerLink]="['/categoria-sex-shop']">
+            <ion-thumbnail item-start class="catthumb">
+              <img src="assets/imgs/categoriaSex3.jpg" class="catimg4"/>
+            </ion-thumbnail>
+            <p >Sex Shop</p> 
+          </ion-button>
+          </ion-list>
+
+        
+</ion-content>

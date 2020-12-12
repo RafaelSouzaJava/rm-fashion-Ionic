@@ -1,0 +1,29 @@
+<ion-header >
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Variados</ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+ 
+<ion-content aion-no-padding>
+  <ion-fab horizontal="end" vertical="top" edge  slot="fixed">
+    <ion-fab-button [routerLink]="['/cart']">
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> 
+
+  <ion-list >
+    <ion-button ion-item-group class="catbtn" *ngFor="let item of items" (click)="showProdutos(item.id)">      
+      <ion-thumbnail  item-start>
+        <ion-img src="{{bucketUrl}}/catAcess{{item.id}}.jpg" class="catimg"></ion-img>
+      </ion-thumbnail>
+      <div>
+        <h2 color="light">{{ item.nome }}</h2>
+    </div>
+    </ion-button>    
+  </ion-list> 
+
+</ion-content>

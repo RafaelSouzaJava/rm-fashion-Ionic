@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Produto Detail Sex Shop</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="light">
+    <ion-img [src]="item?.imageUrl || 'assets/imgs/prod.jpg'"></ion-img>
+    <ion-card-content>
+      <ion-card-title color="light">
+        {{item?.nome}}
+      </ion-card-title>
+      <p >     
+      <p >
+       Preço: {{item?.preco | currency}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button block outline (click)="addToCart(item)">Adicionar ao carrinho</ion-button>
+</ion-content>

@@ -1,0 +1,31 @@
+:host {
+    ion-content {
+        --background: linear-gradient(135deg, var(--ion-color-tertiary-shade), var(--ion-color-primary-tint));
+    }
+}
+
+.catbtn {
+    width: 105%; height: 120px; padding: 0px; 
+}
+
+.catimg {
+    width: 130px; 
+    height: 115px;
+    margin-left: -160px;
+    margin-top: -70%;
+    
+}
+
+div {   
+    display: inline;
+    position: absolute;
+    text-overflow: clip clip;
+ }
+
+h2{
+    margin-top: 10px;
+     font-size: 15px; 
+      margin-left: 100px;
+      margin-right: 0%;
+      text-align: center;
+}

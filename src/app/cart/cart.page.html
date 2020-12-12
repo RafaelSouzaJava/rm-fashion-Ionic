@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Carrinho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of itemsFem" >
+      <ion-thumbnail item-start>
+        <ion-img [src]= "item.produto.imageUrl || 'assets/imgs/prod.jpg'"></ion-img>
+      </ion-thumbnail>
+      <div>
+      <h2>{{item.produto.nome}}</h2>
+      <p class="p1">Preço: </p> <p class="pcolor">{{item.produto.preco | currency}}</p>      
+      <ion-icon class="icons1" name= "remove-circle" color="tertiary" (click)="decreaseQuantityFem(item.produto)"></ion-icon>   
+      <p  class="p2">Quantidade:</p> <p  class="pcolor2">{{item.quantidade}}</p>     
+      <ion-icon class="icons2" name= "add-circle" color="tertiary" (click)="increaseQuantityFem(item.produto)"></ion-icon>     
+      <ion-icon class="icons3" name= "trash" item-end color="danger" (click)="removeItemFem(item.produto)"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of itemsMasc" >
+      <ion-thumbnail item-start>
+        <ion-img [src]= "item.produto.imageUrl || 'assets/imgs/prod.jpg'"></ion-img>
+      </ion-thumbnail>
+      <div>
+        <h2>{{item.produto.nome}}</h2>
+        <p class="p1">Preço: </p> <p class="pcolor">{{item.produto.preco | currency}}</p>
+        <ion-icon class="icons1" name= "remove-circle" color="tertiary" (click)="decreaseQuantityMasc(item.produto)"></ion-icon> 
+        <p class="p2">Quantidade:</p> <p class="pcolor2">{{item.quantidade}}</p>
+        <ion-icon class="icons2" name= "add-circle" color="tertiary" (click)="increaseQuantityMasc(item.produto)"></ion-icon>     
+      <ion-icon class="icons3" name= "trash" item-end color="danger" (click)="removeItemMasc(item.produto)"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of itemVar" >
+      <ion-thumbnail item-start>
+        <ion-img [src]= "item.produto.imageUrl || 'assets/imgs/prod.jpg'"></ion-img>
+      </ion-thumbnail>
+      <div>
+        <h2>{{item.produto.nome}}</h2>
+        <p class="p1">Preço: </p> <p class="pcolor">{{item.produto.preco | currency}}</p>
+        <ion-icon class="icons1" name= "remove-circle" color="tertiary" (click)="decreaseQuantityVar(item.produto)"></ion-icon> 
+        <p class="p2">Quantidade:</p> <p class="pcolor2">{{item.quantidade}}</p>
+        <ion-icon class="icons2" name= "add-circle" color="tertiary" (click)="increaseQuantityVar(item.produto)"></ion-icon>     
+        <ion-icon class="icons3" name= "trash" item-end color="danger" (click)="removeItemVar(item.produto)"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of itemSex" >
+      <ion-thumbnail item-start>
+        <ion-img [src]= "item.produto.imageUrl || 'assets/imgs/prod.jpg'"></ion-img>
+      </ion-thumbnail>
+      <div>
+        <h2>{{item.produto.nome}}</h2>
+        <p class="p1">Preço: </p> <p class="pcolor">{{item.produto.preco | currency}}</p>
+        <ion-icon class="icons1" name= "remove-circle" color="tertiary" (click)="decreaseQuantitySex(item.produto)"></ion-icon>
+        <p class="p2">Quantidade:</p> <p class="pcolor2" >{{item.quantidade}}</p>
+        <ion-icon class="icons2" name= "add-circle" color="tertiary" (click)="increaseQuantitySex(item.produto)"></ion-icon>     
+        <ion-icon class="icons3" name= "trash" item-end color="danger" (click)="removeItemSex(item.produto)"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngIf="total() > 0">
+    <h1>Total: </h1>
+    <h1 item-end>{{total() | currency}}</h1>
+  </ion-item>
+
+  <ion-item *ngIf="total() <= 0">
+    <h1>Seu Carrinho está vazio </h1>    
+  </ion-item>
+  <ion-button block (click)="goOn()">Continuar comprando</ion-button>
+  <ion-button block color="secondary" (click)="checkout()">Finalizar pedido</ion-button>
+</ion-content>

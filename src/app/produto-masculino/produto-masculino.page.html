@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ProdutoMasculino</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list >
+    <ion-button class="catbtn" *ngFor="let item of items" (click)="showDetail(item.id)">
+      <ion-thumbnail slot="start" >
+        <ion-img [src]="item.imagemUrl || 'assets/imgs/prod.jpg'" class="catimg"></ion-img>
+      </ion-thumbnail>
+      <div>
+      <h3 color="light">{{item.nome}}</h3>
+    </div>
+    <div>
+      <p class="p1">Tamanho:</p> <p class="pcolor">{{item.tamanho}}</p>
+    </div>
+    <div>
+      <p class="p2">Cor:</p> <p class="pcolor2">{{item.cor}}</p>
+    </div>
+    <div>
+      <p class="p3">Preço:</p> <p class="pcolor3">{{item.preco | currency}}</p>
+    </div>
+    </ion-button>
+  </ion-list>
+</ion-content>

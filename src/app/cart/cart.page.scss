@@ -1,0 +1,110 @@
+:host {
+    ion-content {
+        --background: linear-gradient(135deg, var(--ion-color-tertiary-shade), var(--ion-color-primary-tint));
+    }
+}
+
+
+
+ion-list {
+    
+    background: linear-gradient(135deg, var(--ion-color-tertiary-shade), var(--ion-color-primary-tint));
+}
+
+.catimg {
+    width: 130px; 
+    height: 130px;
+    margin-left: -138px;
+    margin-top: -65%;
+    position: relative;
+}
+
+div {   
+   display: inline;
+   
+   text-overflow: clip clip;
+}
+
+.p1{
+    font-size: 12px;
+     margin-top: 45px;
+      margin-left: 150px;
+       margin-right: 0%;
+       color: black;
+       position: static;
+
+}
+
+.p2{
+    font-size: 12px; 
+    margin-top: -17px;
+     margin-left: 118px; 
+     margin-right: 0;
+     color: black;
+     
+}
+
+.pcolor{
+    font-size: 13px;
+    margin-top: -25px;
+     margin-left: 220px;
+      margin-right: 0%;
+    color: #f4f5f8;
+    
+}
+
+.pcolor2{
+    float: left;
+    font-size: 13px;
+    margin-top: -28px;
+     margin-left: 230px;
+      margin-right: 0%;
+    color: #f4f5f8;
+}
+
+.pcolor3{
+    font-size: 12px;
+    margin-top: -23px;
+     margin-left: 180px;
+      margin-right: 0%;
+    color: #f4f5f8;
+}
+
+.p3{
+    font-size: 11px; 
+    margin-top: px;
+     margin-left: 0px;
+      margin-right: 0%;
+      position: relative;
+      color: black;
+}
+
+h2{
+    margin-top: 10px;
+     font-size: 12px; 
+      margin-left: 15px;
+      margin-right: 10px;
+      position: absolute;
+      white-space: pre-line;   
+     text-overflow: clip clip;
+     
+}
+
+.icons1{
+   margin-left: 194px;
+    margin-right: -190px;
+}
+
+.icons2{
+    float: left;
+    margin-right: -250px;
+    margin-left: 252px;
+   margin-top: -28px;
+}
+
+.icons3{
+    margin-right: -265px;
+    margin-left: 260px;
+}
+
+    
